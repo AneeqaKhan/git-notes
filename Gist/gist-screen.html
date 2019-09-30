@@ -26,15 +26,15 @@
 
     <main class="gist-main">
       <nav class="gist-nav ">
-        <div style="display: flex; align-items: center;">
-          <div class="gist-profile-info">
+        <div class="gist-profile-info">
+          <div class="gist-profile">
             <i
               class="fa fas fa-user"
               style="color: #def5ec; font-size: 30px;"
             ></i>
           </div>
-          <div style="line-height: 30%; ">
-            <p style="color: #0773FF">
+          <div>
+            <p style="color: #0773FF;">
               Anna John / <span><b>package.json</b></span>
             </p>
             <p style="font-size: 12px; color: #cacaca;">
@@ -46,7 +46,7 @@
           </div>
         </div>
 
-        <div style="color: #0773FF">
+        <div class="gist-actions">
           <span style="margin-right: 10px">
             <i class="fa far fa-edit"></i>
             Edit
@@ -110,7 +110,7 @@
           <li></li>
           <li>
             NSMutableURLRequest*request = [self
-            createRequest@"http://localhost:3000/session.json":params];
+            createRequest@"http://localhost:3000/session.json": params];
           </li>
           <li></li>
           <li>Server*shared = [Server sharedInstance];</li>
@@ -119,12 +119,12 @@
             delegate:nil context:nil];
           </li>
           <li>
-            [shared.webRequest
-            addTarget:selfaction:@selector(loginResponse:)forRequestEvents:SMWebRequestEventComplete];
+            [shared.webRequest addTarget:selfaction: @selector(loginResponse:)
+            forRequestEvents: SMWebRequestEventComplete];
           </li>
           <li>
-            [shared.webRequest
-            addTarget:selfaction:@selector(loginFailure:)forRequestEvents:SMWebRequestEventError];
+            [shared.webRequest addTarget:selfaction: @selector(loginFailure:)
+            forRequestEvents: SMWebRequestEventError];
           </li>
           <li>[shared.webRequest start];</li>
           <li>}</li>

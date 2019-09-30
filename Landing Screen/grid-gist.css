@@ -1,3 +1,7 @@
+.grid-main {
+  padding: 0px 150px;
+  flex-wrap: wrap;
+}
 .grid-container {
   display: grid;
   align-content: center;
@@ -38,4 +42,84 @@ li::before {
   flex-direction: row;
   border-top: 2px solid #dddddd;
   align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-container {
+    display: grid;
+    align-content: center;
+    grid-template-columns: auto;
+    grid-gap: 30px;
+  }
+  .grid-main {
+    padding: 0px 50px;
+  }
+  section {
+    height: 200px;
+    width: 310px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .grid-container {
+    display: grid;
+    align-content: center;
+    grid-template-columns: auto;
+    grid-gap: 30px;
+  }
+  .grid-main {
+    padding: 0px 50px;
+  }
+  section {
+    height: 200px;
+    width: 310px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .grid-container {
+    display: grid;
+    align-content: center;
+    grid-template-columns: auto auto;
+    grid-gap: 30px;
+  }
+  .grid-main {
+    padding: 0px 70px;
+  }
+  section {
+    height: 340px;
+    width: 450px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .grid-container {
+    display: grid;
+    align-content: center;
+    grid-template-columns: auto auto;
+    grid-gap: 30px;
+  }
+  .grid-main {
+    padding: 0px 70px;
+  }
+  section {
+    height: 300px;
+    width: 410px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .grid-container {
+    display: grid;
+    align-content: center;
+    grid-template-columns: auto auto auto;
+    grid-gap: 60px;
+  }
+  .grid-main {
+    padding: 0px 150px;
+  }
+  section {
+    height: 340px;
+    width: 450px;
+  }
 }

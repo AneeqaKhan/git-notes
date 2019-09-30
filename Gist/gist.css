@@ -3,6 +3,7 @@
   box-shadow: -3px 5px 8px #dddddd, 3px 5px 8px #dddddd;
   border-radius: 5px;
   font-size: 14px;
+  flex-wrap: wrap;
 }
 .gist-header {
   border-bottom: 1px solid #dddddd;
@@ -57,7 +58,7 @@ span input {
   padding: 50px 0 20px;
   justify-content: space-between;
 }
-.gist-profile-info {
+.gist-profile {
   margin-right: 20px;
   border: 1px solid #def5ec;
   height: 50px;
@@ -66,4 +67,117 @@ span input {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.gist-profile-info {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+.gist-actions {
+  color: #0773ff;
+}
+
+@media only screen and (max-width: 600px) {
+  .profile-header {
+    margin-left: 15px;
+  }
+  .gist-main {
+    padding: 0 50px;
+  }
+  .gist-container {
+    font-size: 12px;
+  }
+  .gist-nav {
+    flex-direction: column;
+  }
+  span input {
+    width: 40px;
+  }
+  .gist-actions {
+    margin: 10px 0 0 10px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .profile-header {
+    margin-left: 15px;
+  }
+  .gist-main {
+    padding: 0 100px;
+  }
+  .gist-container {
+    font-size: 12px;
+  }
+  .gist-nav {
+    flex-direction: column;
+  }
+  span input {
+    width: 40px;
+  }
+  .gist-actions {
+    margin: 10px 0 0 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .profile-header {
+    margin-left: 20px;
+  }
+  .gist-main {
+    padding: 0 150px;
+  }
+  .gist-container {
+    font-size: 14px;
+  }
+  .gist-nav {
+    flex-direction: column;
+  }
+  span input {
+    width: 40px;
+  }
+  .gist-actions {
+    margin: 10px 0 0 10px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .profile-header {
+    margin-left: 25px;
+  }
+  .gist-main {
+    padding: 0 200px;
+  }
+  .gist-container {
+    font-size: 14px;
+  }
+  .gist-nav {
+    flex-direction: row;
+  }
+  span input {
+    width: 40px;
+  }
+  .gist-actions {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .profile-header {
+    margin-left: 25px;
+  }
+  .gist-main {
+    padding: 0 240px;
+  }
+  .gist-container {
+    font-size: 14px;
+  }
+  .gist-nav {
+    flex-direction: row;
+  }
+  span input {
+    width: 40px;
+  }
+  .gist-actions {
+    margin: 0;
+  }
 }

@@ -108,9 +108,8 @@ footer {
   .login-btn {
     margin-top: 10px;
   }
-  footer {
-    justify-content: center;
-    flex-direction: column;
+  main {
+    padding: 0px 50px;
   }
 }
 
@@ -125,9 +124,8 @@ footer {
   .login-btn {
     margin-top: 10px;
   }
-  footer {
-    justify-content: center;
-    flex-direction: column;
+  main {
+    padding: 0px 50px;
   }
 }
 
@@ -139,9 +137,8 @@ footer {
     padding: 0px 100px;
     align-items: unset;
   }
-  footer {
-    justify-content: space-between;
-    flex-direction: row;
+  main {
+    padding: 0px 100px;
   }
 }
 
@@ -153,9 +150,8 @@ footer {
     padding: 0px 120px;
     align-items: center;
   }
-  footer {
-    justify-content: space-between;
-    flex-direction: row;
+  main {
+    padding: 0px 120px;
   }
 }
 
@@ -167,8 +163,7 @@ footer {
     padding: 0px 150px;
     align-items: center;
   }
-  footer {
-    justify-content: space-between;
-    flex-direction: row;
+  main {
+    padding: 0px 150px;
   }
 }

@@ -1,3 +1,9 @@
+.profile-main {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 50px;
+  justify-content: center;
+}
 .profile-section {
   padding: 70px 70px;
   text-align: center;
@@ -34,4 +40,54 @@ section ol {
   list-style: none;
   counter-reset: li;
   padding: 0 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .profile-main {
+    flex-direction: row;
+    padding: 0 20px;
+  }
+  .profile-section {
+    padding: 70px 20px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .profile-main {
+    flex-direction: row;
+    padding: 0 20px;
+  }
+  .profile-section {
+    padding: 70px 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .profile-main {
+    flex-direction: row;
+    padding: 0 50px;
+  }
+  .profile-section {
+    padding: 70px 50px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .profile-main {
+    flex-direction: row;
+    padding: 0 100px;
+  }
+  .profile-section {
+    padding: 70px 50px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .profile-main {
+    flex-direction: row;
+    padding: 0;
+  }
+  .profile-section {
+    padding: 70px 70px;
+  }
 }

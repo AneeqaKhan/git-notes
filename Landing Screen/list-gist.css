@@ -12,11 +12,7 @@ td {
 }
 th {
   background-color: #def5ec;
-  color: #959d9a;
-  height: 40px;
-  align-self: center;
 }
-
 .checkbox-label {
   display: block;
   position: relative;
@@ -27,13 +23,11 @@ th {
   width: 24px;
   clear: both;
 }
-
 .checkbox-label input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
-
 .checkbox-label .checkbox-custom {
   position: absolute;
   top: 0px;
@@ -49,7 +43,6 @@ th {
   -o-transition: all 0.3s ease-out;
   border: 1px solid #5acba1;
 }
-
 .checkbox-label input:checked ~ .checkbox-custom {
   background-color: #ffffff;
   border-radius: 5px;
@@ -59,7 +52,6 @@ th {
   opacity: 1;
   border: 1px solid #5acba1;
 }
-
 .checkbox-label .checkbox-custom::after {
   position: absolute;
   content: "";
@@ -80,7 +72,6 @@ th {
   -ms-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
 }
-
 .checkbox-label input:checked ~ .checkbox-custom::after {
   -webkit-transform: rotate(45deg) scale(1);
   -ms-transform: rotate(45deg) scale(1);
@@ -95,8 +86,6 @@ th {
   background-color: transparent;
   border-radius: 0;
 }
-
-/* For Ripple Effect */
 .checkbox-label .checkbox-custom::before {
   position: absolute;
   content: "";
@@ -110,7 +99,6 @@ th {
   -ms-transform: scale(0);
   transform: scale(0);
 }
-
 .checkbox-label input:checked ~ .checkbox-custom::before {
   left: -3px;
   top: -3px;
@@ -142,4 +130,67 @@ th {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #def5ec;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #def5ec;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  td:nth-of-type(1):before {
+    content: "";
+  }
+  td:nth-of-type(2):before {
+    content: "";
+  }
+  td:nth-of-type(3):before {
+    content: "Name";
+  }
+  td:nth-of-type(4):before {
+    content: "Date";
+  }
+  td:nth-of-type(5):before {
+    content: "Time";
+  }
+  td:nth-of-type(6):before {
+    content: "Keyword";
+  }
+  td:nth-of-type(7):before {
+    content: "Notebook Name";
+  }
+  td:nth-of-type(8):before {
+    content: "";
+  }
 }
