@@ -1,0 +1,69 @@
+.gist-container {
+  border: 1px solid#DDDDDD;
+  box-shadow: -3px 5px 8px #dddddd, 3px 5px 8px #dddddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.gist-header {
+  border-bottom: 1px solid #dddddd;
+  padding: 7px 20px;
+}
+section ol {
+  list-style: none;
+  counter-reset: li;
+  padding: 0 100px;
+}
+
+li {
+  counter-increment: li;
+  color: #464646;
+}
+
+li::before {
+  content: counter(li);
+  color: #cacaca;
+  display: inline-block;
+  width: 1em;
+  margin-left: -2.5em;
+  margin-right: 20px;
+}
+span input {
+  height: 15px;
+  width: 40px;
+  border: 1px solid #969696;
+  border-radius: 5px;
+  color: #969696;
+  margin: 0 8px;
+  text-align: center;
+}
+.profile-header {
+  margin-left: 25px;
+  border: 1px solid #def5ec;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gist-main {
+  padding: 0 270px;
+  font-size: 15px;
+  margin-bottom: 50px;
+}
+.gist-nav {
+  display: flex;
+  flex-direction: row;
+  padding: 50px 0 20px;
+  justify-content: space-between;
+}
+.gist-profile-info {
+  margin-right: 20px;
+  border: 1px solid #def5ec;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

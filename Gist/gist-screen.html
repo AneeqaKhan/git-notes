@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Git Notes</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="gist.css" />
+  <link rel="stylesheet" href="../Landing Screen/list-gist.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <body>
+    <header class="header">
+      <span class="logo">EMUMBA</span>
+      <div class="search-container" style="display: flex; flex-direction:row;">
+        <input placeholder="Search Notes..." class="search-input" />
+        <div class="profile-header">
+          <i
+            class="fa fas fa-user"
+            style="color: #def5ec; font-size: 30px;"
+          ></i>
+        </div>
+      </div>
+    </header>
+
+    <main class="gist-main">
+      <nav class="gist-nav ">
+        <div style="display: flex; align-items: center;">
+          <div class="gist-profile-info">
+            <i
+              class="fa fas fa-user"
+              style="color: #def5ec; font-size: 30px;"
+            ></i>
+          </div>
+          <div style="line-height: 30%; ">
+            <p style="color: #0773FF">
+              Anna John / <span><b>package.json</b></span>
+            </p>
+            <p style="font-size: 12px; color: #cacaca;">
+              Created 7 hours ago
+            </p>
+            <p style="font-size: 10px; color: #cacaca; line-height: 5%">
+              Broadcast Server
+            </p>
+          </div>
+        </div>
+
+        <div style="color: #0773FF">
+          <span style="margin-right: 10px">
+            <i class="fa far fa-edit"></i>
+            Edit
+          </span>
+          <span style="margin-right: 10px">
+            <i class="fa far fa-trash-o"></i>
+            Delete
+          </span>
+          <span style="margin-right: 10px">
+            <i class="fa fa-star-o"></i>
+            Star
+            <input value="0" />
+          </span>
+          <span>
+            <i class="fa far fa-code-fork"></i>
+            Fork
+            <input value="0" />
+          </span>
+        </div>
+      </nav>
+
+      <section class="gist-container">
+        <div class="gist-header">
+          <span style=" border: 1px solid black; padding: 0 3px;"
+            ><i class="fa fas fa-code"></i
+          ></span>
+          <span style="color: #0773FF">gistfile1.m</span>
+        </div>
+        <ol>
+          <li>//</li>
+          <li>// Server.m</li>
+          <li>// Loop</li>
+          <li>//</li>
+          <li>// Created by Fletcher Fowler on 8/19/12.</li>
+          <li>// Copyright (c) 2012 Zamboni Dev. All rights reserved.</li>
+          <li>//</li>
+          <li>#import "Server.h"</li>
+          <li>#import "SMWebRequest.h"</li>
+          <li>#import "User+Implementation.h"</li>
+          <li>@implementation Server</li>
+          <li></li>
+          <li>@synthesize webRequest = _webRequest;</li>
+          <li>@synthesize delegate = _delegate;</li>
+          <li>static Server*sharedObject;</li>
+          <li>+(Server*)sharedInstance{</li>
+          <li>if((sharedObject == nil){</li>
+          <li>sharedObject = [[super allocWithZone:NULL]init];</li>
+          <li>}</li>
+          <li>return sharedObject;</li>
+          <li>}</li>
+          <li></li>
+          <li>
+            +(void)loginWithEmail:(NSString*)email
+            andPassword:(NSString*)password
+          </li>
+          <li>{</li>
+          <li>NSDictionary*params = @{</li>
+          <li>@"email" :email,</li>
+          <li>@"password" :password</li>
+          <li>};</li>
+          <li></li>
+          <li>
+            NSMutableURLRequest*request = [self
+            createRequest@"http://localhost:3000/session.json":params];
+          </li>
+          <li></li>
+          <li>Server*shared = [Server sharedInstance];</li>
+          <li>
+            shared.weRequest = [SMWebRequest requestWithURLRequest:request
+            delegate:nil context:nil];
+          </li>
+          <li>
+            [shared.webRequest
+            addTarget:selfaction:@selector(loginResponse:)forRequestEvents:SMWebRequestEventComplete];
+          </li>
+          <li>
+            [shared.webRequest
+            addTarget:selfaction:@selector(loginFailure:)forRequestEvents:SMWebRequestEventError];
+          </li>
+          <li>[shared.webRequest start];</li>
+          <li>}</li>
+          <li></li>
+          <li>+(void)loginResponse:(NSData*)data</li>
+          <li>{</li>
+          <li>Server*shared = [Server sharedInstance];</li>
+          <li></li>
+          <li>NSError*error;</li>
+          <li>
+            NSDirectory *response = [NSJSONSerialization JSONObjectWithData:data
+            options:0 error:&error];
+          </li>
+          <li>[User loginUser:response];</li>
+        </ol>
+      </section>
+    </main>
+  </body>
+</html>
