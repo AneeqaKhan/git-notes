@@ -35,16 +35,19 @@ footer {
   flex-wrap: wrap;
   align-items: center;
 }
-.search-container {
-}
 .logo {
   font-size: 50px;
   color: #fff;
   margin-right: 25px;
   display: flex;
 }
-.search-input {
-  height: 40px;
+.search-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.search-input-container {
+  height: 35px;
   width: 300px;
   background-color: inherit;
   border-radius: 5px;
@@ -52,11 +55,24 @@ footer {
   color: #def5ec;
   padding-left: 10px;
   margin-right: 25px;
+  display: flex;
+  align-items: center;
+}
+.search-input {
+  width: 270px;
+  background-color: inherit;
+  border: 0px;
 }
 ::placeholder {
   color: #def5ec;
 }
+.search-btn-container {
+  cursor: pointer;
+  background-color: inherit;
+  border: 0;
+}
 .login-btn {
+  margin-bottom: 10px;
   height: 35px;
   width: 100px;
   background-color: white;
@@ -111,6 +127,10 @@ footer {
   main {
     padding: 0px 50px;
   }
+  .search-container {
+    align-items: unset;
+    flex-direction: column;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -127,6 +147,10 @@ footer {
   main {
     padding: 0px 50px;
   }
+  .search-container {
+    align-items: unset;
+    flex-direction: column;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -139,6 +163,10 @@ footer {
   }
   main {
     padding: 0px 100px;
+  }
+  .search-container {
+    align-items: center;
+    flex-direction: row;
   }
 }
 
@@ -153,6 +181,10 @@ footer {
   main {
     padding: 0px 120px;
   }
+  .search-container {
+    align-items: center;
+    flex-direction: row;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -165,5 +197,9 @@ footer {
   }
   main {
     padding: 0px 150px;
+  }
+  .search-container {
+    align-items: center;
+    flex-direction: row;
   }
 }

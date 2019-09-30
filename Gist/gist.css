@@ -96,6 +96,10 @@ span input {
   .gist-actions {
     margin: 10px 0 0 10px;
   }
+  li::before {
+    margin-left: -6.5em;
+    margin-right: 10px;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -116,6 +120,10 @@ span input {
   }
   .gist-actions {
     margin: 10px 0 0 10px;
+  }
+  li::before {
+    margin-left: -6.5em;
+    margin-right: 10px;
   }
 }
 
@@ -138,6 +146,10 @@ span input {
   .gist-actions {
     margin: 10px 0 0 10px;
   }
+  li::before {
+    margin-left: -4.5em;
+    margin-right: 15px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -159,6 +171,10 @@ span input {
   .gist-actions {
     margin: 0;
   }
+  li::before {
+    margin-left: -2.5em;
+    margin-right: 20px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -179,5 +195,9 @@ span input {
   }
   .gist-actions {
     margin: 0;
+  }
+  li::before {
+    margin-left: -2.5em;
+    margin-right: 20px;
   }
 }
